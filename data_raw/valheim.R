@@ -18,18 +18,6 @@ items_raw <- retrieve_tibble(
 recipes_raw <- retrieve_tibble(
   recipes, "https://valheim-modding.github.io/Jotunn/data/objects/recipe-list.html"
   )
-locations_raw <- retrieve_tibble(
-  locations, "https://valheim-modding.github.io/Jotunn/data/zones/location-list.html"
-  )
-vegetation_raw <- retrieve_tibble(
-  vegetation, "https://valheim-modding.github.io/Jotunn/data/zones/vegetation-list.html"
-  )
-materials_raw <- retrieve_tibble(
-  materials, "https://valheim-modding.github.io/Jotunn/data/prefabs/material-list.html"
-  )
-pieces_raw <- retrieve_tibble(
-  pieces, "https://valheim-modding.github.io/Jotunn/data/pieces/piece-list.html"
-  )
 
 # items ----
 items_raw$Prefab <- gsub("([[:upper:]])", " \\1", items_raw$Prefab)
@@ -65,22 +53,6 @@ recipes_df <- recipes_raw %>%
   rename(recipe_name = name) %>%
   as.data.frame()
 
-# vegetation ----
-glimpse(vegetation_raw)
-vegetation_raw %>%
-  janitor::clean_names()
-
-# locations ----
-glimpse(locations_raw)
-locations_raw %>%
-  janitor::clean_names()
-
-# materials ----
-glimpse(materials_raw)
-materials_raw %>%
-  janitor::clean_names()
-
-# pieces ----
-glimpse(pieces_raw)
-pieces_raw %>%
-  janitor::clean_names()
+# askjdhakjshd ----
+#usethis::use_data(penguins_df, penguins_raw_df, internal = TRUE, overwrite = TRUE)
+#write_csv(penguins_df, here::here("inst", "extdata", "penguins.csv"))
