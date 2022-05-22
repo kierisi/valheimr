@@ -5,19 +5,17 @@ library(janitor)
 library(rvest)
 
 # web scraping ----
-retrieve_tibble <- function(var_name, url) {
-  temp <- rvest::read_html(url)
-  var_name <- temp %>%
-    html_element("table") %>%
-    html_table()
-}
+items_raw <- read_html(
+  "https://valheim-modding.github.io/Jotunn/data/objects/item-list.html"
+  ) %>%
+  html_element("table") %>%
+  html_table()
 
-items_raw <- retrieve_tibble(
-  items, "https://valheim-modding.github.io/Jotunn/data/objects/item-list.html"
-  )
-recipes_raw <- retrieve_tibble(
-  recipes, "https://valheim-modding.github.io/Jotunn/data/objects/recipe-list.html"
-  )
+recipes_raw <- read_html(
+  "https://valheim-modding.github.io/Jotunn/data/objects/recipe-list.html"
+  ) %>%
+  html_element("table") %>%
+  html_table()
 
 # items ----
 items_raw$Prefab <- gsub("([[:upper:]])", " \\1", items_raw$Prefab)
@@ -54,5 +52,7 @@ recipes_df <- recipes_raw %>%
   as.data.frame()
 
 # write data to file ----
+usethis::use_data_raw("items_raw")
+
 usethis::use_data(items_df)
 usethis::use_data(recipes_df)
