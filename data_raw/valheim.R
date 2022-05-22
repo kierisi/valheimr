@@ -53,6 +53,6 @@ recipes_df <- recipes_raw %>%
   rename(recipe_name = name) %>%
   as.data.frame()
 
-# askjdhakjshd ----
-#usethis::use_data(penguins_df, penguins_raw_df, internal = TRUE, overwrite = TRUE)
-#write_csv(penguins_df, here::here("inst", "extdata", "penguins.csv"))
+# write data to file ----
+usethis::use_data(items_df)
+usethis::use_data(recipes_df)
