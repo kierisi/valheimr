@@ -55,7 +55,7 @@ recipes_df <- recipes_raw %>%
   as.data.frame()
 
 # write data to file ----
-usethis::use_data_raw("items_raw")
-usethis::use_data_raw("recipes_raw")
+usethis::use_data(items_raw, overwrite = TRUE)
+usethis::use_data(recipes_raw, overwrite = TRUE)
 usethis::use_data(items_df, overwrite = TRUE)
 usethis::use_data(recipes_df, overwrite = TRUE)
