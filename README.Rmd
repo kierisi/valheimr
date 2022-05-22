@@ -67,7 +67,8 @@ library(valheimr)
 library(dplyr)
 
 items <- items_df
-glimpse(items)
+glimpse(items) %>% 
+  head()
 ```
 
 ### The recipes dataset
@@ -80,6 +81,7 @@ library(valheimr)
 library(dplyr)
 
 recipes <- recipes_df
-glimpse(recipes)
+glimpse(recipes) %>% 
+  head()
 ```
 
