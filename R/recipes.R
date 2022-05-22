@@ -1,0 +1,19 @@
+#' A tidy format of all current recipes and required resources for Valheim,
+#' as collected from Jotunn: The Valheim Library
+#'
+#' Variable names have been converted to snake_case and modified to be more
+#' descriptive. Amount and component required were split into two separate
+#' columns for ease of downstream use.
+#'
+#' @format a tibble with 368 rows and 6 variables:
+#' \describe{
+#'   \item{recipe_name}{Internal name of the recipe.}
+#'   \item{item_name}{In-game name of the item created by a recipe.}
+#'   \item{amount_created}{The amount of an item created by a recipe.}
+#'   \item{item_id}{}
+#'   \item{amount_required}{The amount of a given material required to make an item.}
+#'   \item{component_required}{}
+#' }
+#'
+#' @source {Jotunn: The Valheim Library, recipe list} \url{https://valheim-modding.github.io/Jotunn/data/objects/recipe-list.html}
+"recipes_df"

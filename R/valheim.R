@@ -45,14 +45,16 @@ recipes_df <- recipes_raw %>%
     values_to = "amount_item",
     values_drop_na = TRUE) %>%
   separate(amount_item,
-    into = c("amount", "item"),
+    into = c("amount_required", "component_required"),
     sep = "\\s",
     extra = "merge") %>%
-  rename(recipe_name = name) %>%
+  rename(
+    recipe_name = name,
+    amount_created = amount) %>%
   as.data.frame()
 
 # write data to file ----
 usethis::use_data_raw("items_raw")
-
-usethis::use_data(items_df)
-usethis::use_data(recipes_df)
+usethis::use_data_raw("recipes_raw")
+usethis::use_data(items_df, overwrite = TRUE)
+usethis::use_data(recipes_df, overwrite = TRUE)

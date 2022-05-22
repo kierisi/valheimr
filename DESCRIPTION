@@ -1,12 +1,14 @@
 Package: valheimr
-Title: What the Package Does (One Line, Title Case)
+Title: Item and Recipe Data for Valheim
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Jesse", "Mostipak", , "jesse@rstudio.com", role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0003-1915-9612"))
+Description: Item and recipe data from the Valheim video game in a tidy format. 
+    The data was scraped from Jotunn: The Valheim Library. Given that Valheim is 
+    still in Early Release, please use this package with caution, as it is 
+    expected to evolve significantly as the game is further developed.
+License: `use_mit_license()`
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
