@@ -38,8 +38,8 @@ After installing `{valheimr}`, you can access each of the data frames as follows
 
 ```{r}
 library(valheimr)
-items_df    # prints the items_df data frame to the Console
-recipes_df  # prints the recipes_df data frame to the Console
+#items_df    # uncomment and run to print the items_df data frame to the Console
+#recipes_df  # uncomment and run to print the recipes_df data frame to the Console
 
 items <- items_df      # stores the items_df data frame as `items`
 recipes <- recipes_df  # stores the recipes_df data frame as `recipes`
@@ -65,10 +65,12 @@ into one of the following types:
 ```{r}
 library(valheimr)
 library(dplyr)
+library(gt)
 
 items <- items_df
 glimpse(items) %>% 
-  head()
+  head() %>% 
+  gt()
 ```
 
 ### The recipes dataset
@@ -79,9 +81,11 @@ each component of a recipe.
 ```{r}
 library(valheimr)
 library(dplyr)
+library(gt)
 
 recipes <- recipes_df
 glimpse(recipes) %>% 
-  head()
+  head() %>% 
+  gt()
 ```
 
