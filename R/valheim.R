@@ -38,7 +38,8 @@ recipes_df <- recipes_raw %>%
   mutate(name = str_trim(str_remove_all(name, pattern = coll(" Recipe_")))) %>%
   separate(resources_required,
     into = c("item_1", "item_2", "item_3", "item_4"),
-    sep = "(?<=[A-Za-z])(?=[0-9])") %>%
+    sep = "(?<=[A-Za-z])(?=[0-9])",
+    fill = "right") %>%
   pivot_longer(
     cols = c(item_1:item_4),
     names_to = "item_id",

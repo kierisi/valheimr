@@ -8,7 +8,7 @@ Description: Item and recipe data from the Valheim video game in a tidy format.
     The data was scraped from Jotunn: The Valheim Library. Given that Valheim is 
     still in Early Release, please use this package with caution, as it is 
     expected to evolve significantly as the game is further developed.
-License: `use_mit_license()`
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
