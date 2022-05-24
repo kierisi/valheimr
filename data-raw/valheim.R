@@ -42,7 +42,7 @@ recipes_df <- recipes_raw %>%
     fill = "right") %>%
   pivot_longer(
     cols = c(item_1:item_4),
-    names_to = "item_id",
+    names_to = "item_index",
     values_to = "amount_item",
     values_drop_na = TRUE) %>%
   separate(amount_item,
@@ -52,6 +52,7 @@ recipes_df <- recipes_raw %>%
   rename(
     recipe_name = name,
     amount_created = amount) %>%
+  mutate(item_index = as.integer(gsub("item_", "", item_index))) %>%
   as.data.frame()
 
 # write data to file ----
