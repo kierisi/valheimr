@@ -11,9 +11,9 @@ a tibble with 368 rows and 6 variables:
 \item{recipe_name}{Internal name of the recipe.}
 \item{item_name}{In-game name of the item created by a recipe.}
 \item{amount_created}{The amount of an item created by a recipe.}
-\item{item_id}{}
+\item{item_index}{A chronological numbering system for each item within a given recipe.}
 \item{amount_required}{The amount of a given material required to make an item.}
-\item{component_required}{}
+\item{component_required}{The name of the item needed for a given recipe.}
 }
 }
 \source{
