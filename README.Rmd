@@ -85,3 +85,4 @@ glimpse(recipes) %>%
   head() 
 ```
 
+<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/temp_image.png" style="width:100%;">

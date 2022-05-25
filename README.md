@@ -129,3 +129,5 @@ glimpse(recipes) %>%
 #> 5               5             Bronze
 #> 6               2          Deer hide
 ```
+
+<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/temp_image.png" style="width:100%;">
