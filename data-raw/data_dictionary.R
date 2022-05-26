@@ -1,15 +1,45 @@
+library(pointblank)
+
 items_df %>%
-  pointblank::create_informant(tbl_name = "items_df", label = "All known items in Valheim") %>%
-  pointblank::info_tabular(
-    description = "This two-column table is nothing all that
-    interesting, but, it's fine for examples on **GitHub**
-    `README` pages. Column names are `a` and `b`. ((Cool stuff))"
+  create_informant(tbl_name = "items_df", label = "All known items in Valheim") %>%
+  info_tabular(
+    description = "The `items` data frame contains all of the in-game items from [**Valheim**](https://www.valheimgame.com/), which iscurrently in early release. The data is packaged and presented in a tidy format."
   ) %>%
-  pointblank::info_columns(
+  info_columns(
     columns = "prefab",
-    emoji = "((cool stuff))") %>%
-  pointblank::info_columns(
+    info = "A collection of game objects used in multiple places across the game.") %>%
+  info_columns(
     columns = "token",
-    `💁` = "(((cooler stuff)))"
+    info = "Reference token for a given game item. The `$item_` and `$customization_` prefixes have been removed."
+  ) %>%
+  info_columns(
+    columns = "name",
+    info = "In-game name of a given item."
+  ) %>%
+  info_columns(
+    columns = "type",
+    info = "An item's type, which falls into one of the following categories:
+    \n* **Ammo**
+    \n* **Armor**: Helmet, Legs
+    \n* **Chest**
+    \n* **Consumable**
+    \n* **Customization**
+    \n* **Material**
+    \n* **Misc**
+    \n* **Tool**
+    \n* **Torch**
+    \n* **Trophie**
+    \n* **Weapon**: Bow, One Handed Weapon,Two Handed Weapon, Shield, Shoulder
+    \n* **Utility**"
+  ) %>%
+  info_columns(
+    columns = "description",
+    info = "In-game flavor text, where provided."
+  ) %>%
+  info_section(
+    section_name = "API documentation",
+    info = "Data was originally collected from [**Jotunn: The Valheim Library**](https://valheim-modding.github.io/Jotunn/index.html)") %>%
+  get_informant_report(
+    title = "Valheim Items"
   )
 
