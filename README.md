@@ -39,21 +39,7 @@ recipes <- recipes_df  # stores the recipes_df data frame as `recipes`
 
 ### The items dataset
 
-The `items` dataset is a data frame with 434 rows and 5 variables. Items
-fall into one of the following types:
-
--   Ammo
--   Armor: *Helmet, Legs*
--   Chest
--   Consumable
--   Customization
--   Material
--   Misc
--   Tool
--   Torch
--   Trophie
--   Weapon: *Bow, One Handed Weapon,Two Handed Weapon, Shield, Shoulder*
--   Utility
+The `items` dataset is a data frame with 434 rows and 5 variables.
 
 <img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_items_df.png" style="width:100%;">
 
