@@ -93,6 +93,8 @@ glimpse(items) %>%
 #> 6                        Valuable
 ```
 
+<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_items_df.png" style="width:100%;">
+
 ### The recipes dataset
 
 The `recipes` dataset is a data frame with 368 rows and 6 variables,
@@ -129,5 +131,3 @@ glimpse(recipes) %>%
 #> 5               5             Bronze
 #> 6               2          Deer hide
 ```
-
-<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/temp_image.png" style="width:100%;">

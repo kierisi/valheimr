@@ -19,18 +19,8 @@ items_df %>%
   info_columns(
     columns = "type",
     info = "An item's type, which falls into one of the following categories:
-    \n* **Ammo**
-    \n* **Armor**: Helmet, Legs
-    \n* **Chest**
-    \n* **Consumable**
-    \n* **Customization**
-    \n* **Material**
-    \n* **Misc**
-    \n* **Tool**
-    \n* **Torch**
-    \n* **Trophie**
-    \n* **Weapon**: Bow, One Handed Weapon,Two Handed Weapon, Shield, Shoulder
-    \n* **Utility**"
+    `Ammo`, `Armor`, `Chest`, `Consumable`, `Customization`, `Material`, `Misc`,
+    `Tool`, `Torch`, `Trophie`, `Weapon`, `Utility`"
   ) %>%
   info_columns(
     columns = "description",

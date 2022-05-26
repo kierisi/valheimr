@@ -71,6 +71,8 @@ glimpse(items) %>%
   head() 
 ```
 
+<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_items_df.png" style="width:100%;">
+
 ### The recipes dataset
 The `recipes` dataset is a data frame with 368 rows and 6 variables, broken down
 into the item crafted, amount of the item crafted, and the amount and type of 
@@ -85,4 +87,3 @@ glimpse(recipes) %>%
   head() 
 ```
 
-<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/temp_image.png" style="width:100%;">
