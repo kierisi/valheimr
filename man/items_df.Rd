@@ -7,7 +7,7 @@
 \format{
 a tibble with 434 rows and 5 variables:
 \describe{
-\item{prefab}{Base item in the game. Prefabs cannot be broken down into smaller constituent items.}
+\item{prefab}{A collection of game objects used in multiple places across the game.}
 \item{token}{Reference token for a given item.}
 \item{name}{In-game name of the item.}
 \item{type}{The given type of an item.}

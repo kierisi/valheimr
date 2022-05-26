@@ -18,24 +18,24 @@ recipes_raw <- read_html(
   html_table()
 
 # items ----
-items_raw$Prefab <- gsub("([[:upper:]])", " \\1", items_raw$Prefab)
-items_raw$Type <- gsub("([[:upper:]])", " \\1", items_raw$Type)
-
 items_df <- items_raw %>%
   clean_names() %>%
   mutate(
+    prefab = gsub("([[:upper:]])", " \\1", prefab),
     prefab = str_trim(prefab),
     token = str_remove_all(token, pattern = coll("$item_")),
     token = str_remove_all(token, pattern = coll("$customization_")),
+    type = gsub("([[:upper:]])", " \\1", type),
     type = str_trim(type),
     description = str_remove_all(description, pattern = coll("<color=yellow>"))) %>%
   as.data.frame()
 
 # recipes ----
-recipes_raw$Name <- gsub("([[:upper:]])", " \\1", recipes_raw$Name)
 recipes_df <- recipes_raw %>%
   clean_names() %>%
-  mutate(name = str_trim(str_remove_all(name, pattern = coll(" Recipe_")))) %>%
+  mutate(
+    name = gsub("([[:upper:]])", " \\1", name),
+    name = str_trim(str_remove_all(name, pattern = coll(" Recipe_")))) %>%
   separate(resources_required,
     into = c("item_1", "item_2", "item_3", "item_4"),
     sep = "(?<=[A-Za-z])(?=[0-9])",
