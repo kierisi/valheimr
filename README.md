@@ -43,7 +43,7 @@ The `items` dataset is a data frame with 434 rows and 5 variables. Items
 fall into one of the following types:
 
 -   Ammo
--   Armor: Helmet, Legs
+-   Armor: *Helmet, Legs*
 -   Chest
 -   Consumable
 -   Customization
@@ -52,48 +52,10 @@ fall into one of the following types:
 -   Tool
 -   Torch
 -   Trophie
--   Weapon: Bow, One Handed Weapon,Two Handed Weapon, Shield, Shoulder
+-   Weapon: *Bow, One Handed Weapon,Two Handed Weapon, Shield, Shoulder*
 -   Utility
 
-``` r
-library(valheimr)
-library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
-
-items <- items_df
-glimpse(items) %>% 
-  head() 
-#> Rows: 434
-#> Columns: 5
-#> $ prefab      <chr> "Abomination_attack1", "Abomination_attack2", "Abomination…
-#> $ token       <chr> "Swing attack", "Slam attack", "Stub to the ground", "oaks…
-#> $ name        <chr> "Swing attack", "Slam attack", "Stub to the ground", "Acor…
-#> $ type        <chr> "One Handed Weapon", "One Handed Weapon", "One Handed Weap…
-#> $ description <chr> "NULL", "NULL", "NULL", "Plant them to grow an oak tree.",…
-#>                prefab              token               name              type
-#> 1 Abomination_attack1       Swing attack       Swing attack One Handed Weapon
-#> 2 Abomination_attack2        Slam attack        Slam attack One Handed Weapon
-#> 3 Abomination_attack3 Stub to the ground Stub to the ground One Handed Weapon
-#> 4               Acorn           oakseeds             Acorns          Material
-#> 5               Amber              amber              Amber          Material
-#> 6         Amber Pearl         amberpearl        Amber pearl          Material
-#>                       description
-#> 1                            NULL
-#> 2                            NULL
-#> 3                            NULL
-#> 4 Plant them to grow an oak tree.
-#> 5                        Valuable
-#> 6                        Valuable
-```
-
-<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_items_df.png">
+<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_items_df.png" style="width:100%;">
 
 ### The recipes dataset
 
@@ -101,33 +63,4 @@ The `recipes` dataset is a data frame with 368 rows and 6 variables,
 broken down into the item crafted, amount of the item crafted, and the
 amount and type of each component of a recipe.
 
-``` r
-library(valheimr)
-library(dplyr)
-
-recipes <- recipes_df
-glimpse(recipes) %>% 
-  head() 
-#> Rows: 368
-#> Columns: 6
-#> $ recipe_name        <chr> "Adze", "Adze", "Armor Bronze Chest", "Armor Bronze…
-#> $ item_name          <chr> "NULL", "NULL", "Bronze plate cuirass", "Bronze pla…
-#> $ amount_created     <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-#> $ item_id            <chr> "item_1", "item_2", "item_1", "item_2", "item_1", "…
-#> $ amount_required    <chr> "3", "2", "5", "2", "5", "2", "20", "5", "10", "20"…
-#> $ component_required <chr> "Wood", "Stone", "Bronze", "Deer hide", "Bronze", "…
-#>          recipe_name             item_name amount_created item_id
-#> 1               Adze                  NULL              1  item_1
-#> 2               Adze                  NULL              1  item_2
-#> 3 Armor Bronze Chest  Bronze plate cuirass              1  item_1
-#> 4 Armor Bronze Chest  Bronze plate cuirass              1  item_2
-#> 5  Armor Bronze Legs Bronze plate leggings              1  item_1
-#> 6  Armor Bronze Legs Bronze plate leggings              1  item_2
-#>   amount_required component_required
-#> 1               3               Wood
-#> 2               2              Stone
-#> 3               5             Bronze
-#> 4               2          Deer hide
-#> 5               5             Bronze
-#> 6               2          Deer hide
-```
+<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_recipes_df.png" style="width:100%;">

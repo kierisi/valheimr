@@ -45,12 +45,13 @@ items <- items_df      # stores the items_df data frame as `items`
 recipes <- recipes_df  # stores the recipes_df data frame as `recipes`
 ```
 
+
 ### The items dataset
 The `items` dataset is a data frame with 434 rows and 5 variables. Items fall 
 into one of the following types: 
 
 * Ammo
-* Armor: Helmet, Legs
+* Armor: _Helmet, Legs_
 * Chest
 * Consumable
 * Customization
@@ -59,32 +60,15 @@ into one of the following types:
 * Tool
 * Torch
 * Trophie
-* Weapon: Bow, One Handed Weapon,Two Handed Weapon, Shield, Shoulder
+* Weapon: _Bow, One Handed Weapon,Two Handed Weapon, Shield, Shoulder_
 * Utility
 
-```{r}
-library(valheimr)
-library(dplyr)
-
-items <- items_df
-glimpse(items) %>% 
-  head() 
-```
-
 <img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_items_df.png" style="width:100%;">
+
 
 ### The recipes dataset
 The `recipes` dataset is a data frame with 368 rows and 6 variables, broken down
 into the item crafted, amount of the item crafted, and the amount and type of 
 each component of a recipe.
-
-```{r}
-library(valheimr)
-library(dplyr)
-
-recipes <- recipes_df
-glimpse(recipes) %>% 
-  head() 
-```
 
 <img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_recipes_df.png" style="width:100%;">
