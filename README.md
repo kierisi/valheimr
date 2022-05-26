@@ -93,7 +93,7 @@ glimpse(items) %>%
 #> 6                        Valuable
 ```
 
-<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_items_df.png" style="width:100%;">
+<img src="https://raw.githubusercontent.com/kierisi/valheimr/main/images/pb_items_df.png">
 
 ### The recipes dataset
 
